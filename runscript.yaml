@@ -1,0 +1,11 @@
+- hosts: web1
+  name: execute
+  become: true
+  
+  tasks:
+    - name: execute python
+      command: python /home/kali/repos/start.py
+      register: message
+    - name: print debug message
+      debug:
+        msg: "{{ message }}"

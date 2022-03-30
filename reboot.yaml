@@ -1,0 +1,8 @@
+- hosts: web1
+  name: reboot-test
+  become: true
+  
+  tasks:
+    - name: reboot
+      reboot:
+        reboot_timeout: 60

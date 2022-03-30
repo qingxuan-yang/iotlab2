@@ -1,0 +1,4 @@
+- hosts: web1
+  name: reboot-test
+  become: true
+  
